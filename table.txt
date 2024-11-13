@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Life Cycle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 13px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color:white;
+            font-weight: bold;
+            /* text-transform: uppercase; */
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        th, td {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        td {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .highlight {
+           
+            
+            font-weight: bold;
+        color: #16a085;
+        }
+
+        th[rowspan="2"] {
+            vertical-align: middle;
+        }
+
+        @media (max-width: 768px) {
+            th, td {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            th, td {
+                font-size: 10px;
+                padding: 8px;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Product Life Cycle</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Sr#</th>
+                <th rowspan="2">Product</th>
+                <th rowspan="2">Description</th>
+                <th colspan="6">Initial Phase</th>
+                <th colspan="4">Product</th>
+                <th rowspan="2">Market demand</th>
+                <th rowspan="2">Reason</th>
+            </tr>
+            <tr>
+                <th>Components procurement</th>
+                <th>Testing</th>
+                <th>Installation</th>
+                <th>PCB design</th>
+                <th>PCB Assembly</th>
+                <th>Upgradation</th>
+                <th>Circuit price</th>
+                <th>Product body design</th>
+                <th>Product body assembly</th>
+                <th>Product actual price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Smart Energy meter</td>
+                <td>Energy metering upto 100 A</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Not required yet</td>
+                <td>4740</td>
+                <td>Analysis underway</td>
+                <td>In material selection phase</td>
+                <td>Yet to be decided</td>
+                <td class="highlight">Very high</td>
+                <td>Excessive billing</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Large IoT switch</td>
+                <td>4 channel switching + dimming</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>In process</td>
+                <td>4200</td>
+                <td>Analysis underway</td>
+                <td>In material selection phase</td>
+                <td>Yet to be decided</td>
+                <td class="highlight">High</td>
+                <td>Energy efficiency</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Small IoT switch</td>
+                <td>2 channel switching</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Yet to be decided</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>In process</td>
+                <td>2290</td>
+                <td>Analysis underway</td>
+                <td>In material selection phase</td>
+                <td>Yet to be decided</td>
+                <td class="highlight">High</td>
+                <td>Energy efficiency</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Heavy load IoT switch</td>
+                <td>1 channel switching</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Yet to be decided</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>In process</td>
+                <td>2540</td>
+                <td>Analysis underway</td>
+                <td>In material selection phase</td>
+                <td>Yet to be decided</td>
+                <td class="highlight">High</td>
+                <td>Energy efficiency</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Water management system</td>
+                <td>Metering + automation</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Pending</td>
+                <td>Not required yet</td>
+                <td>3950</td>
+                <td>Analysis underway</td>
+                <td>In material selection phase</td>
+                <td>Yet to be decided</td>
+                <td class="highlight">Very high</td>
+                <td>Water saving</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Smart AC IoT device</td>
+                <td>AC card control + automation</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Pending</td>
+                <td>Not required yet</td>
+                <td>2190</td>
+                <td>Analysis underway</td>
+                <td>In material selection phase</td>
+                <td>Yet to be decided</td>
+                <td class="highlight">Very high</td>
+                <td>Energy efficiency</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Human presence IoT device</td>
+                <td>Still + moving presence detection</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Pending</td>
+                <td>Not required yet</td>
+                <td>3140</td>
+                <td>Analysis underway</td>
+                <td>In material selection phase</td>
+                <td>Yet to be decided</td>
+                <td class="highlight">Very high</td>
+                <td>Energy efficiency</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Human presence IoT device</td>
+                <td>Still + moving presence detection</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Completed</td>
+                <td>Pending</td>
+                <td>Not required yet</td>
+                <td>3140</td>
+                <td>Analysis underway</td>
+                <td>In material selection phase</td>
+                <td>Yet to be decided</td>
+                <td class="highlight">Very high</td>
+                <td>Energy efficiency</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>
