@@ -17,6 +17,10 @@
             color: #333;
         }
 
+        .table-container {
+            overflow-x: auto;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -33,9 +37,8 @@
 
         th {
             background-color: #2c3e50;
-            color:white;
+            color: white;
             font-weight: bold;
-            /* text-transform: uppercase; */
         }
 
         tbody tr:nth-child(even) {
@@ -61,14 +64,13 @@
         }
 
         .highlight {
-           
-            
             font-weight: bold;
-        color: #16a085;
+            color: #16a085;
         }
-        .Completed_highlight{
+
+        .Completed_highlight {
             background-color: rgb(126 181 178);
-            font-size: bold;
+            font-weight: bold;
             color: green;
         }
 
@@ -76,174 +78,306 @@
             vertical-align: middle;
         }
 
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            border-radius: 8px;
+        }
+
+        .modal-header {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .modal-body {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .modal-close {
+            cursor: pointer;
+            color: red;
+            float: right;
+            font-size: 18px;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .details-btn {
+            background-color: #34b1ca;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .details-btn:hover {
+            background-color: #45a049;
+        }
         @media (max-width: 768px) {
             th, td {
                 font-size: 12px;
                 padding: 10px;
+            }
+
+            .modal {
+                width: 50%;
+            }
+            .details-btn {
+                font-size: 12px;
+                padding: 6px 10px;
             }
         }
 
         @media (max-width: 576px) {
             th, td {
                 font-size: 10px;
-                padding: 8px;
+                padding: 6px;
             }
 
             table {
-                font-size: 0.9em;
+                font-size: 0.8em;
+            }
+            .details-btn {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+            .modal {
+                padding: 15px;
+                /* margin-left: 10px;
+                margin-right: 10px; */
+            }
+
+            .modal-header {
+                font-size: 16px;
+            }
+
+            .modal-body {
+                font-size: 12px;
             }
         }
     </style>
 </head>
 <body>
     <h2>Product Life Cycle</h2>
-    <table>
-        <thead>
-            <tr>
-                <th rowspan="2">Sr#</th>
-                <th rowspan="2">Product</th>
-                <th rowspan="2">Description</th>
-                <th colspan="6">Initial Phase</th>
-                <th colspan="4">Product</th>
-                <th rowspan="2">Market demand</th>
-                <th rowspan="2">Reason</th>
-            </tr>
-            <tr>
-                <th>Components procurement</th>
-                <th>Testing</th>
-                <th>Installation</th>
-                <th>PCB design</th>
-                <th>PCB Assembly</th>
-                <th>Upgradation</th>
-                <th>Circuit price</th>
-                <th>Product body design</th>
-                <th>Product body assembly</th>
-                <th>Product actual price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Smart Energy meter</td>
-                <td>Energy metering upto 100 A</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td >Completed</td>
-                <td>Not required yet</td>
-                <td>4740</td>
-                <td>Analysis underway</td>
-                <td>In material selection phase</td>
-                <td>Yet to be decided</td>
-                <td class="highlight">Very high</td>
-                <td>Excessive billing</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Large IoT switch</td>
-                <td>4 channel switching + dimming</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td class="Completed_highlight">Completed</td>
-                <td class="Completed_highlight">Completed</td>
-                <td>4200</td>
-                <td>Analysis underway</td>
-                <td>In material selection phase</td>
-                <td>Yet to be decided</td>
-                <td class="highlight">High</td>
-                <td>Energy efficiency</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Small IoT switch</td>
-                <td>2 channel switching</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Yet to be decided</td>
-                <td>Completed</td>
-                <td >Completed</td>
-                <td class="Completed_highlight">Completed</td>
-                <td>2290</td>
-                <td>Analysis underway</td>
-                <td>In material selection phase</td>
-                <td>Yet to be decided</td>
-                <td class="highlight">High</td>
-                <td>Energy efficiency</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Heavy load IoT switch</td>
-                <td>1 channel switching</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Yet to be decided</td>
-                <td>Completed</td>
-                <td >Completed</td>
-                <td class="Completed_highlight">Completed</td>
-                <td>2540</td>
-                <td>Analysis underway</td>
-                <td>In material selection phase</td>
-                <td>Yet to be decided</td>
-                <td class="highlight">High</td>
-                <td>Energy efficiency</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Water management system</td>
-                <td>Metering + automation</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td class="Completed_highlight">Completed</td>
-                <td>Not required yet</td>
-                <td>3950</td>
-                <td>Analysis underway</td>
-                <td>In material selection phase</td>
-                <td>Yet to be decided</td>
-                <td class="highlight">Very high</td>
-                <td>Water saving</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Smart AC IoT device</td>
-                <td>AC card control + automation</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td class="Completed_highlight">Completed</td>
-                <td>Not required yet</td>
-                <td>2190</td>
-                <td>Analysis underway</td>
-                <td>In material selection phase</td>
-                <td>Yet to be decided</td>
-                <td class="highlight">Very high</td>
-                <td>Energy efficiency</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Human presence IoT device</td>
-                <td>Still + moving presence detection</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td>Completed</td>
-                <td class="Completed_highlight">Completed</td>
-                <td>Not required yet</td>
-                <td>3140</td>
-                <td>Analysis underway</td>
-                <td>In material selection phase</td>
-                <td>Yet to be decided</td>
-                <td class="highlight">Very high</td>
-                <td>Energy efficiency</td>
-            </tr>
-            
-            
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Sr#</th>
+                    <th rowspan="2">Product</th>
+                    <th rowspan="2">Description</th>
+                    <th colspan="7">Initial Phase</th>
+                    <th colspan="4">Product</th>
+                    <th rowspan="2">Market demand</th>
+                    <th rowspan="2">Reason</th>
+                </tr>
+                <tr>
+                    <th>Components procurement</th>
+                    <th>Testing</th>
+                    <th>Installation</th>
+                    <th>PCB design</th>
+                    <th>PCB Assembly</th>
+                    <th>Upgradation</th>
+                    <th>Details</th>
+                    <th>Circuit price</th>
+                    <th>Product body design</th>
+                    <th>Product body assembly</th>
+                    <th>Product actual price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-details="Yet to be installed">
+                    <td>1</td>
+                    <td>Smart Energy meter</td>
+                    <td>Energy metering upto 100 A</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td >Completed</td>
+                    <td>Not required yet</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td>4740</td>
+                    <td>Analysis underway</td>
+                    <td>In material selection phase</td>
+                    <td>Yet to be decided</td>
+                    <td class="highlight">Very high</td>
+                    <td>Excessive billing</td>
+                </tr>
+                <tr data-details="installed">
+                    <td>2</td>
+                    <td>Large IoT switch</td>
+                    <td>4 channel switching + dimming</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td class="Completed_highlight">Completed</td>
+                    <td class="Completed_highlight">Completed</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td>4200</td>
+                    <td>Analysis underway</td>
+                    <td>In material selection phase</td>
+                    <td>Yet to be decided</td>
+                    <td class="highlight">High</td>
+                    <td>Energy efficiency</td>
+                </tr>
+                <tr data-details="installed">
+                    <td>3</td>
+                    <td>Small IoT switch</td>
+                    <td>2 channel switching</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Yet to be decided</td>
+                    <td>Completed</td>
+                    <td >Completed</td>
+                    <td class="Completed_highlight">Completed</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td>2290</td>
+                    <td>Analysis underway</td>
+                    <td>In material selection phase</td>
+                    <td>Yet to be decided</td>
+                    <td class="highlight">High</td>
+                    <td>Energy efficiency</td>
+                </tr>
+                <tr data-details="Yet To be installed">
+                    <td>4</td>
+                    <td>Heavy load IoT switch</td>
+                    <td>1 channel switching</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Yet to be decided</td>
+                    <td>Completed</td>
+                    <td >Completed</td>
+                    <td class="Completed_highlight">Completed</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td>2540</td>
+                    <td>Analysis underway</td>
+                    <td>In material selection phase</td>
+                    <td>Yet to be decided</td>
+                    <td class="highlight">High</td>
+                    <td>Energy efficiency</td>
+                </tr>
+                <tr data-details="installed Yet to be configured">
+                    <td>5</td>
+                    <td>Water management system</td>
+                    <td>Metering + automation</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td class="Completed_highlight">Completed</td>
+                    <td>Not required yet</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td>3950</td>
+                    <td>Analysis underway</td>
+                    <td>In material selection phase</td>
+                    <td>Yet to be decided</td>
+                    <td class="highlight">Very high</td>
+                    <td>Water saving</td>
+                </tr>
+                <tr data-details="installed Yet to be configured">
+                    <td>6</td>
+                    <td>Smart AC IoT device</td>
+                    <td>AC card control + automation</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td class="Completed_highlight">Completed</td>
+                    <td>Not required yet</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td>2190</td>
+                    <td>Analysis underway</td>
+                    <td>In material selection phase</td>
+                    <td>Yet to be decided</td>
+                    <td class="highlight">Very high</td>
+                    <td>Energy efficiency</td>
+                </tr>
+                <tr data-details="installed Yet to be configured">
+                    <td>7</td>
+                    <td>Human presence IoT device</td>
+                    <td>Still + moving presence detection</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td>Completed</td>
+                    <td class="Completed_highlight">Completed</td>
+                    <td>Not required yet</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td>3140</td>
+                    <td>Analysis underway</td>
+                    <td>In material selection phase</td>
+                    <td>Yet to be decided</td>
+                    <td class="highlight">Very high</td>
+                    <td>Energy efficiency</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal" id="details-modal">
+        <span class="modal-close" id="modal-close">&times;</span>
+        <div class="modal-header" id="modal-header">Details</div>
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+    <script>
+        const detailsButtons = document.querySelectorAll('.details-btn');
+        const modal = document.getElementById('details-modal');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const modalBody = document.getElementById('modal-body');
+        const modalClose = document.getElementById('modal-close');
+
+        detailsButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const row = event.target.closest('tr');
+                const details = row.getAttribute('data-details');
+
+                modalBody.textContent = details;
+                modal.style.display = 'block';
+                modalOverlay.style.display = 'block';
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+        });
+
+        modalOverlay.addEventListener('click', () => {
+            modal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+        });
+    </script>
+
 </body>
 </html>
