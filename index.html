@@ -136,7 +136,6 @@
             border-radius: 4px;
             transition: background-color 0.3s;
         }
-
         .details-btn:hover {
             background-color: #45a049;
         }
@@ -154,6 +153,17 @@
                 padding: 6px 10px;
             }
         }
+
+        .fixed-column {
+            position: sticky;
+            left: 0;
+            background-color: #f2f2f2;
+            z-index: 1;
+        }
+        .fixed-column + .fixed-column {
+            left: 100px; 
+        }
+
 
         @media (max-width: 576px) {
             th, td {
@@ -191,13 +201,14 @@
             <br>
                 <tr> 
                     <th rowspan="2">Sr#</th>
-                    <th rowspan="2">Product</th>
-                    <th rowspan="2">Description</th>
+                    <th class="fixed-column"  rowspan="2" style="background-color: #2c3e50;">Product</th>
+                    <th class="fixed-column" rowspan="2" style="background-color: #2c3e50;">Description</th>
                     <th colspan="7">Initial Phase</th>
-                    <th colspan="6">Product</th>
+                    <th colspan="7">Product</th>
                     <!-- <th colspan="3">Tasks Timeline</th> -->
                     <th rowspan="2">Market demand</th>
                     <th rowspan="2">Reason</th>
+                    <th rowspan="2">Web Interface</th>
                 </tr>
                 <br>
                     <th>Components procurement</th>
@@ -213,13 +224,14 @@
                     <th>Product body</th>
                     <th>Product actual price</th>
                     <th>Product completion timeline</th>
+                    <th>Demo details</th>
                 </tr>
             </thead>
             <tbody>
                 <tr data-details="3 Smart meters installed in following areas: 1.2nd floor Kitchen 2. IT Room 3. Bacement (under observation)">
-                    <td>1</td>
-                    <td>Smart Energy meter</td>
-                    <td>Energy metering upto 100 A</td>
+                    <td >1</td>
+                    <td  class="fixed-column">Smart Energy meter</td>
+                    <td class="fixed-column">Energy metering upto 100 A</td>
                     <td>Completed</td>
                     <td>Completed</td>
                     <td>Completed</td>
@@ -232,14 +244,16 @@
                     <td>Complete till 15 Feb</td>
                     <td>Complete till 15 Mar</td>
                     <td>Yet to be decided</td>
-                    <td></td>
+                    <td>15 March 2025</td>
+                    <td>In Testing Phase</td>
                     <td class="highlight">Very high</td>
                     <td>Excessive billing</td>
+                    <td>integrated In website & displaying all data</td>
                 </tr>
                 <tr data-details="Waiting for Fan speed controller ">
                     <td>2</td>
-                    <td>Large IoT switch</td>
-                    <td>4 channel switching + dimming</td>
+                    <td class="fixed-column">Large IoT switch</td>
+                    <td class="fixed-column">4 channel switching + dimming</td>
                     <td>Completed</td>
                     <td>Waiting for Fan speed controller </td>
                     <td>Completed</td>
@@ -252,14 +266,16 @@
                     <td>Complete till 15 Feb</td>
                     <td>Complete till 15 Mar</td>
                     <td>Yet to be decided</td>
-                    <td></td>
+                    <td>15 March 2025</td>
+                    <td>Waiting For Fan Controller</td>
                     <td class="highlight">High</td>
                     <td>Energy efficiency</td>
+                    <td></td>
                 </tr>
                 <tr data-details="Installed in previous IT room and in under Testing phase">
-                    <td>3</td>
-                    <td>Small IoT switch</td>
-                    <td>2 channel switching</td>
+                    <td >3</td>
+                    <td class="fixed-column">Small IoT switch</td>
+                    <td class="fixed-column">2 channel switching</td>
                     <td>Completed</td>
                     <td>Completed</td>
                     <td>Completed</td>
@@ -272,14 +288,16 @@
                     <td>Complete till 15 Feb</td>
                     <td>Complete till 15 Mar</td>
                     <td>Yet to be decided</td>
-                    <td></td>
+                    <td>15 March 2025</td>
+                    <td>Installed Not yet configured</td>
                     <td class="highlight">High</td>
                     <td>Energy efficiency</td>
+                    <td>integrated In website</td>
                 </tr>
                 <tr data-details="Installed in IT room and yet to be configured">
                     <td>4</td>
-                    <td>Heavy load IoT switch</td>
-                    <td>1 channel switching</td>
+                    <td class="fixed-column">Heavy load IoT switch</td>
+                    <td class="fixed-column">1 channel switching</td>
                     <td>Completed</td>
                     <td>Completed</td>
                     <td>Completed</td>
@@ -292,14 +310,16 @@
                     <td>Complete till 15 Feb</td>
                     <td>Complete till 15 Mar</td>
                     <td>Yet to be decided</td>
-                    <td></td>
+                    <td>15 March 2025</td>
+                    <td>Installed Not yet configured</td>
                     <td class="highlight">High</td>
                     <td>Energy efficiency</td>
+                    <td>UI</td>
                 </tr>
                 <tr data-details="Installed and in under Testing phase">
                     <td>5</td>
-                    <td>Water management system</td>
-                    <td>Metering + automation</td>
+                    <td class="fixed-column">Water management system</td>
+                    <td class="fixed-column">Metering + automation</td>
                     <td>Completed</td>
                     <td>Completed</td>
                     <td>Completed</td>
@@ -312,14 +332,16 @@
                     <td>Complete till 15 Feb</td>
                     <td>Complete till 15 Mar</td>
                     <td>Yet to be decided</td>
-                    <td></td>
+                    <td>15 March 2025</td>
+                    <td>In Testing phase water flow sensor not working</td>
                     <td class="highlight">Very high</td>
                     <td>Water saving</td>
+                    <td>integrated In website & contrlling in Testing Phase</td>
                 </tr>
                 <tr data-details="installed and yet to be configured">
                     <td>6</td>
-                    <td>Smart AC IoT device</td>
-                    <td>AC card control + automation</td>
+                    <td class="fixed-column">Smart AC IoT device</td>
+                    <td class="fixed-column">AC card control + automation</td>
                     <td>Completed</td>
                     <td>Completed</td>
                     <td>Completed</td>
@@ -332,14 +354,16 @@
                     <td>Complete till 15 Feb</td>
                     <td>Complete till 15 Mar</td>
                     <td>Yet to be decided</td>
-                    <td></td>
+                    <td>15 March 2025</td>
+                    <td>Installed Not yet configured</td>
                     <td class="highlight">Very high</td>
                     <td>Energy efficiency</td>
+                    <td></td>
                 </tr>
                 <tr data-details="Installed in conference room and in under observation">
                     <td>7</td>
-                    <td>Human presence IoT device</td>
-                    <td>Still + moving presence detection</td>
+                    <td class="fixed-column">Human presence IoT device</td>
+                    <td class="fixed-column">Still + moving presence detection</td>
                     <td>Completed</td>
                     <td>Completed</td>
                     <td>Completed</td>
@@ -352,9 +376,58 @@
                     <td>Complete till 15 Feb</td>
                     <td>Complete till 15 Mar</td>
                     <td>Yet to be decided</td>
-                    <td></td>
+                    <td>15 March 2025</td>
+                    <td> Installed & In Testing Phase</td>
                     <td class="highlight">Very high</td>
                     <td>Energy efficiency</td>
+                    <td></td>
+                </tr>
+
+                <tr data-details="">
+                    <td>8</td>
+                    <td class="fixed-column">Single Phase Smart Energy meter</td>
+                    <td class="fixed-column">Used to measure energy</td>
+                    <td>InCompleted</td>
+                    <td>InCompleted</td>
+                    <td>InCompleted</td>
+                    <td>InCompleted</td>
+                    <td>InCompleted</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="highlight"></td>
+                    <td>Energy efficiency</td>
+                    <td></td>
+                </tr>
+                
+
+                <tr data-details="">
+                    <td>9</td>
+                    <td class="fixed-column">3 Phase Smart Energy meter</td>
+                    <td class="fixed-column">Used to measure energy</td>
+                    <td>InCompleted</td>
+                    <td>InCompleted</td>
+                    <td>InCompleted</td>
+                    <td>InCompleted</td>
+                    <td>InCompleted</td>
+                    <td><button class="details-btn">View Details</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="highlight"></td>
+                    <td>Energy efficiency</td>
+                    <td></td>
                 </tr>
 
 
